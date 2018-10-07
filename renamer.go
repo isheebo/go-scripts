@@ -31,7 +31,7 @@ const (
 )
 
 func main() {
-	dirPath := homePath + "/downloads"
+	dirPath := fmt.Sprintf("%s/downloads", homePath)
 
 	if err := filepath.Walk(dirPath, renamer); err != nil {
 		fmt.Fprintf(os.Stdout, "error: %v\n", err)
